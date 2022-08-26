@@ -1,0 +1,39 @@
+/* :root {
+	--ff: 'system-ui', sans-serif;
+
+	--fw-n: 300;
+	--fw-b: 500;
+
+	--fs-p: 1rem;
+	--fs-h: 1.8rem;
+	--fs-logo: 3.5rem;
+
+	--svg-height: 70px;
+	--svg-width: calc(var(--svg-height) * 0.8);
+	--path-scale: 150%;
+
+	--main-clr: #0a0011;
+	--sec-clr: #333333;
+	--acc-clr: #f75f00;
+	--error-clr: #ff0033;
+
+	--text-clr: #6d6d6d;
+
+	--spacer-sm: 1rem;
+	--spacer-md: calc(var(--spacer-sm) * 2);
+	--spacer-bg: calc(var(--spacer-sm) * 3);
+
+	--shadow: 0 0 1em #55555565;
+	--error-shadow: 0 0 0.4em var(--error-clr);
+	--br: 5px;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--main-clr: #e4e3e3;
+		--sec-clr: #707070;
+		--acc-clr: #dd5500;
+		--text-clr: #000000;
+		--shadow: 0 0 1em #00000040;
+	}
+} */

@@ -1,0 +1,79 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: 2px solid rgba(0, 0, 0, 0.489);
+}
+
+html,
+body {
+	border: none;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+}
+
+.scaffold {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template: 1fr 5fr / 1fr 4fr;
+	grid-template-areas:
+		'sidebar header'
+		'sidebar content';
+}
+
+.sidebar {
+	grid-area: sidebar;
+	display: grid;
+	align-content: start;
+	gap: 50px;
+}
+
+.header {
+	grid-area: header;
+	display: grid;
+	grid-template: 1fr 1fr / 2fr 1fr;
+	grid-template-areas:
+		'search-bar profile'
+		'welcome post-buttons';
+}
+
+.search-bar {
+	grid-area: search-bar;
+}
+
+.profile {
+	grid-area: profile;
+}
+
+.welcome {
+	grid-area: welcome;
+}
+
+.post-buttons {
+	grid-area: post-buttons;
+}
+
+.content {
+	grid-area: content;
+	display: grid;
+	grid-template: 1fr 1fr / 3fr 1fr;
+	grid-template-areas:
+		'projects announcements'
+		'projects trending';
+}
+
+.projects {
+	grid-area: projects;
+}
+
+.announcements {
+	grid-area: announcements;
+}
+
+.trending {
+	grid-area: trending;
+}
