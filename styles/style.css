@@ -77,3 +77,26 @@ body {
 .trending {
 	grid-area: trending;
 }
+
+.projects,
+.announcements,
+.trending {
+	display: flex;
+	flex-direction: column;
+}
+
+.title {
+	grid-column: 1 /-1;
+}
+
+.projects > .card-container {
+	flex: 1;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+}
+
+.announcements > .announcements-container,
+.trending > .trending-container {
+	flex: 1;
+	display: grid;
+}
