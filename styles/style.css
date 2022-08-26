@@ -39,22 +39,42 @@ body {
 	grid-template-areas:
 		'search-bar profile'
 		'welcome post-buttons';
+	padding: 0 50px;
 }
 
-.search-bar {
+.search-bar-container {
 	grid-area: search-bar;
+	display: flex;
+	align-items: center;
+}
+
+#search-bar {
+	flex: 1;
 }
 
 .profile {
 	grid-area: profile;
+	display: flex;
+	align-items: center;
+	justify-content: end;
 }
 
 .welcome {
 	grid-area: welcome;
+	display: grid;
+	grid-template: auto 1fr / auto 1fr;
+}
+
+.welcome > .profile-picture {
+	grid-row: 1 / -1;
 }
 
 .post-buttons {
 	grid-area: post-buttons;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: center;
+	justify-items: center;
 }
 
 .content {
