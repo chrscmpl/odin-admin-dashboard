@@ -42,7 +42,6 @@ body {
 
 	background-color: var(--main-clr);
 	box-shadow: var(--shadow);
-	z-index: 1;
 }
 
 .search-bar-container {
@@ -83,10 +82,11 @@ body {
 	grid-template-areas:
 		'projects announcements'
 		'projects trending';
-	padding: var(--spacer-sm);
-	gap: var(--spacer-sm);
+	padding: var(--spacer-bg);
+	gap: var(--spacer-bg);
 
 	background-color: var(--bg-clr);
+	z-index: -1;
 }
 
 .projects {
@@ -106,6 +106,7 @@ body {
 .trending {
 	display: flex;
 	flex-direction: column;
+	gap: var(--spacer-sm);
 }
 
 .title {
@@ -116,22 +117,96 @@ body {
 	flex: 1;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	gap: var(--spacer-sm);
+	gap: var(--spacer-bg);
 }
 
 .card {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	gap: 5px;
+	padding: 5%;
+
 	background-color: var(--main-clr);
 	box-shadow: var(--shadow);
 	border-radius: var(--br);
 	border-left: 8px solid var(--acc-clr);
 }
 
+.card-buttons {
+	justify-self: end;
+}
+
 .announcements > .announcements-container,
 .trending > .trending-container {
 	flex: 1;
 	display: grid;
+	padding: var(--spacer-md);
+	gap: var(--spacer-sm);
 
 	background-color: var(--main-clr);
 	box-shadow: var(--shadow);
 	border-radius: var(--br);
+}
+
+.announcements-container > .announcement:nth-child(1n + 2) {
+	padding-top: var(--spacer-sm);
+	border-top: 1px solid var(--bg-clr);
+}
+
+.trending-post {
+	display: grid;
+	grid-template: auto 1fr / auto 1fr;
+}
+
+.trending-post > img {
+	grid-row: 1 /-1;
+}
+
+h3 {
+	font-size: var(--fs-h3);
+	font-weight: var(--fw-b);
+	color: var(--h-clr);
+}
+
+h4 {
+	font-size: var(--fs-h4);
+	font-weight: var(--fw-b);
+	color: var(--h-clr);
+}
+
+h5 {
+	font-size: var(--fs-h5);
+	font-weight: var(--fw-b);
+	color: var(--h-clr);
+}
+
+h6 {
+	font-size: var(--fs-p);
+	font-weight: calc(var(--fw-n) + 100);
+	color: var(--h-clr);
+}
+
+@media (max-width: 500px) {
+	.scaffold {
+		grid-template: auto 1fr / 1fr;
+		grid-template-areas:
+			'header'
+			'content';
+	}
+
+	.sidebar {
+		visibility: hidden;
+	}
+
+	.content {
+		grid-template: auto auto 1fr / 1fr;
+		grid-template-areas:
+			'announcements'
+			'trending'
+			'projects';
+	}
+
+	.projects > .card-container {
+		grid-template-columns: 1fr;
+	}
 }

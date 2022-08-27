@@ -2,10 +2,14 @@
 	--ff: 'system-ui', sans-serif;
 
 	--fw-n: 400;
-	--fw-b: 600;
+	--fw-b: 700;
+	--fw-bolder: 900;
 
 	--fs-p: 1rem;
-	--fs-h: 1.8rem;
+	--fs-h2: 1.8rem;
+	--fs-h3: 1.45rem;
+	--fs-h4: 1.3rem;
+	--fs-h5: 1.1rem;
 	--fs-logo: 3.5rem;
 
 	--bg-clr: #e2e8f0;
@@ -13,12 +17,13 @@
 	--sec-clr: #1992d4;
 	--acc-clr: #f0b429;
 
-	--text-clr: #040404;
+	--text-clr: #686868;
+	--h-clr: #040404;
 
-	--spacer-sm: 1rem;
+	--spacer-sm: 10px;
 	--spacer-md: calc(var(--spacer-sm) * 2);
 	--spacer-bg: calc(var(--spacer-sm) * 3);
 
-	--shadow: 0 5px 1em #18181865;
+	--shadow: 3px 5px 7px #18181865;
 	--br: 8px;
 }
