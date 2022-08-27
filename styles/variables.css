@@ -3,9 +3,9 @@
 
 	--fw-n: 400;
 	--fw-b: 700;
-	--fw-bolder: 900;
 
 	--fs-p: 1rem;
+	--fs-h1: 2rem;
 	--fs-h2: 1.8rem;
 	--fs-h3: 1.45rem;
 	--fs-h4: 1.3rem;
@@ -14,8 +14,8 @@
 
 	--bg-clr: #e2e8f0;
 	--main-clr: #ffffff;
-	--sec-clr: #1992d4;
-	--acc-clr: #f0b429;
+	--sec-clr: #4f46e5;
+	--acc-clr: #9333ea;
 
 	--text-clr: #686868;
 	--h-clr: #040404;
