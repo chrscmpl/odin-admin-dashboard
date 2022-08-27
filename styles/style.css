@@ -25,8 +25,9 @@ body {
 	grid-area: sidebar;
 	display: grid;
 	align-content: start;
-	gap: var(--spacer-bg);
+	gap: calc(var(--spacer-bg) * 2);
 	padding: var(--spacer-bg);
+	padding-bottom: 0;
 
 	background-color: var(--sec-clr);
 	color: var(--main-clr);
@@ -36,8 +37,25 @@ body {
 	font-size: var(--fs-h1);
 }
 
+.logo {
+	position: relative;
+	right: 11px;
+}
+
+.sidebar ul {
+	display: grid;
+	gap: var(--spacer-md);
+}
+
 .sidebar li {
 	font-size: var(--fs-h3);
+}
+
+.sidebar div,
+.sidebar li {
+	display: flex;
+	align-items: center;
+	gap: var(--spacer-bg);
 }
 
 .header {
@@ -56,10 +74,6 @@ body {
 	display: flex;
 	align-items: center;
 	gap: var(--spacer-md);
-}
-
-label[for='search-bar'] > svg {
-	stroke: var(--text-clr);
 }
 
 #search-bar {
@@ -134,7 +148,7 @@ label[for='search-bar'] > svg {
 		'projects announcements'
 		'projects trending';
 	padding: var(--spacer-bg);
-	padding-bottom: calc(var(--spacer-bg) * 2);
+	padding-bottom: 0;
 	gap: var(--spacer-bg);
 
 	background-color: var(--bg-clr);
@@ -186,7 +200,7 @@ label[for='search-bar'] > svg {
 }
 
 .card:hover {
-	transform: translateY(-2%);
+	transform: translateY(-2%) scale(102%);
 }
 
 .card-buttons {
@@ -259,6 +273,40 @@ ul {
 	list-style: none;
 }
 
+img {
+	border-radius: 50%;
+}
+
+.header svg {
+	color: var(--h-clr);
+}
+
+.sidebar svg {
+	fill: var(--main-clr);
+}
+
+svg {
+	transition: transform 0.5s;
+}
+
+svg:hover {
+	transform: scale(120%);
+}
+
+.logo svg:hover {
+	transform: none;
+}
+
+img:hover,
+svg:hover,
+.sidebar li:hover,
+button:hover,
+.card:hover,
+.trending-post:hover,
+.announcement:hover {
+	cursor: pointer;
+}
+
 ::-webkit-scrollbar {
 	width: 7px;
 }
@@ -269,10 +317,6 @@ ul {
 
 ::-webkit-scrollbar-thumb {
 	background: var(--sec-clr);
-}
-
-img {
-	border-radius: 50%;
 }
 
 @media (max-width: 500px) {
