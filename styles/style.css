@@ -368,18 +368,6 @@ button:hover,
 	.header {
 		padding-top: 40px;
 	}
-
-	.content {
-		grid-template: auto auto 1fr / 1fr;
-		grid-template-areas:
-			'announcements'
-			'trending'
-			'projects';
-	}
-
-	.projects > .card-container {
-		grid-template-columns: 1fr;
-	}
 }
 
 @media (max-width: 700px) {
@@ -421,6 +409,14 @@ button:hover,
 
 	.content {
 		width: 100vw;
+	}
+
+	.content {
+		grid-template: auto auto 1fr / 1fr;
+		grid-template-areas:
+			'announcements'
+			'trending'
+			'projects';
 	}
 
 	.projects > .card-container {
